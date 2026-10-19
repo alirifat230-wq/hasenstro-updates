@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F7F2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp"
+        android:background="#006341">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="🏪"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="হাসান স্টোর"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="হিসাব"
+            android:textColor="#D8F4E2"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#006341"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="মোট বাকি টাকা"
+                    android:textColor="#D8F4E2"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:id="@+id/totalDue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="৳ ০"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="সব কাস্টমারের মোট বাকি"
+                    android:textColor="#D8F4E2"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="টাকার তালিকা"
+                android:textColor="#183A29"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/searchCustomer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:hint="🔍  কাস্টমার খুঁজুন"
+                    android:paddingHorizontal="12dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:textColor="#183A29"
+                    android:textColorHint="#89948C"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/filterButton"
+                    android:layout_width="54dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="#E1F4E7"
+                    android:gravity="center"
+                    android:text="☷"
+                    android:textColor="#006341"
+                    android:textSize="28sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="ফিল্টার"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="14dp"
+                android:background="#E1F4E7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="কাস্টমারের নাম"
+                    android:textColor="#24563D"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="বাকি টাকা"
+                    android:textColor="#24563D"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emptyCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👥"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="এখনো কোনো কাস্টমার নেই"
+                    android:textColor="#26382D"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="সবুজ + বাটনে চাপ দিয়ে হিসাব যোগ করুন"
+                    android:textColor="#7A857D"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="বাকি টাকার হিসাব"
+                android:textColor="#647067"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="#E1F4E7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌂"
+                android:textColor="#006341"
+                android:textSize="27sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="হোম"
+                android:textColor="#006341"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center">
+
+            <Button
+                android:id="@+id/addMoneyButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="+"
+                android:textSize="36sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:background="@drawable/green_circle"
+                android:backgroundTint="@null"
+                android:elevation="5dp"
+                android:contentDescription="টাকা যোগ করুন"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/navSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙"
+                android:textColor="#34483B"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="সেটিংস"
+                android:textColor="#34483B"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

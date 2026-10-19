@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F4F7F2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/receiveBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="←  ফিরে যান"
+            android:textColor="#006341"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="টাকা জমা"
+            android:textColor="#006341"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="কাস্টমারের কাছ থেকে পাওয়া টাকা লিখুন"
+            android:textColor="#647067"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="কাস্টমারের নাম *"
+            android:textColor="#24563D"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/receiveCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:hint="কাস্টমারের নাম লিখুন"
+            android:padding="14dp"
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            android:textColor="#183A29"
+            android:textColorHint="#89948C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="জমার পরিমাণ (৳) *"
+            android:textColor="#24563D"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/receiveAmount"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:hint="যেমন: 500"
+            android:padding="14dp"
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:textColor="#183A29"
+            android:textSize="20sp"
+            android:textColorHint="#89948C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="জমার তারিখ"
+            android:textColor="#24563D"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/receiveDate"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="তারিখ নির্বাচন করুন"
+            android:padding="14dp"
+            android:textColor="#183A29" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="নোট (ঐচ্ছিক)"
+            android:textColor="#24563D"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/receiveNote"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="জমা সম্পর্কে কিছু লিখুন"
+            android:padding="14dp"
+            android:inputType="textMultiLine"
+            android:textColor="#183A29"
+            android:textColorHint="#89948C" />
+
+        <Button
+            android:id="@+id/saveReceiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:text="✓  জমা সেভ করুন"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:backgroundTint="#078047" />
+
+    </LinearLayout>
+</ScrollView>
